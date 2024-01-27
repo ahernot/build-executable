@@ -1,5 +1,6 @@
 import argparse
 from builder import run
+from src.config import PYTHON_PATH
 
 
 if __name__ == '__main__':
@@ -8,7 +9,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Python program executable builder')  # TODO: description
     parser.add_argument('-i', '--input', help="Path to the Python module's entrypoint", required=True, type=str)
     parser.add_argument('-o', '--output', help="Path to the executable file to create", required=True, type=str)
-    parser.add_argument('-p', '--python', help="Path to the python kernel to use", type=str)
+    parser.add_argument('-p', '--python', help="Path to the python kernel to use", type=str, default=PYTHON_PATH)
     parser.add_argument('-v', '--verbose', action='store_true', help='Enable verbose mode')
     
     # Parse command-line arguments
