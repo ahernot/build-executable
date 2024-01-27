@@ -25,11 +25,10 @@ def run (path_module_entrypoint: str, path_python: str, path_exec: str):
     text_escaped = text.replace('"', r'\"')
 
     command = ['printf', f'"{text_escaped}"', '>', f'"{path_exec}"', '&&', 'chmod', '+x', f'"{path_exec}"']
-    if sudo: command_list = ['sudo'] + command_list
+    if sudo: command = ['sudo'] + command
     command_string = ' '.join(command)
-    subprocess.run(command_string, shell=True, check=True)        
+    print(repr(command_string))
+    subprocess.run(command_string, shell=True, check=True)     
 
-    # # Make file executable
-    # command_list = ['chmod', '+x', path_exec]
-    # if sudo: command_list = ['sudo'] + command_list
-    # subprocess.run(command_list)
+    # TODO: command = f'printf "{text_escaped}" | sudo tee "{path_exec}" >/dev/null && sudo chmod +x "{path_exec}"'
+   
