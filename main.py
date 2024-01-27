@@ -22,3 +22,6 @@ if __name__ == '__main__':
         path_python=args.python,
         verbose=args.verbose
     )
+
+
+# TODO: build its own executable in the ./ root directory on run (python build_executable) / or add it directly to /usr/local/bin (Unix)
