@@ -21,8 +21,3 @@ if __name__ == '__main__':
         path_python=args.python,
         verbose=args.verbose
     )
-
-
-# /usr/local/bin/python3.9 /Users/anatole/Documents/GitHub/build-executable/main.py -i "/Users/anatole/Documents/GitHub/build-executable/main.py" -o "/Users/anatole/Downloads/exec1"  #! Build exec1
-# /Users/anatole/Downloads/exec1 -i "/Users/anatole/Documents/GitHub/build-executable/main.py" -o "/Users/anatole/Downloads/exec2" -p "/usr/local/bin/python3.9"  #! Use exec1
-# /Users/anatole/Downloads/exec1 -i "/Users/anatole/Documents/GitHub/build-executable/main.py" -o "/usr/local/bin/exec2" -p "/usr/local/bin/python3.9"  #! Test SUDO
