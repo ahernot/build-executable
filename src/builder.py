@@ -43,6 +43,6 @@ def run (path_module_entrypoint: str, path_exec: str, path_python: str = PYTHON_
     # Run command
     try:
         subprocess.run(command, shell=True, check=True)
-        print(f'Successfully generated executable at path "{path_exec}".')
+        print(f'Successfully generated executable at path "{path_exec}".')  # TODO: Control with verbose?
     except subprocess.CalledProcessError:
         raise ValueError('Executable creation failed.')
