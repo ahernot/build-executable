@@ -24,7 +24,7 @@ def run (path_module_entrypoint: str, path_exec: str, path_python: str = PYTHON_
         warnings.warn(f'Invalid entrypoint path. Executable will not be linked to an existing Python file.', UserWarning)
         # raise ValueError('Invalid entrypoint path.')
     if not os.path.exists(dirpath_exec):
-        raise ValueError('Invalid executable path: directory "{dirpath_exec}" does not exist.')
+        raise ValueError(f'Invalid executable path: directory "{dirpath_exec}" does not exist.')
 
     # Check permissions for executable build path
     sudo = False
