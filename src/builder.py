@@ -21,7 +21,7 @@ def run (path_module_entrypoint: str, path_exec: str, path_python: str = PYTHON_
     if not os.path.exists(path_python):
         warnings.warn(f'Invalid Python path. Using default path from config file instead ({PYTHON_PATH})', UserWarning)
     if not os.path.exists(path_module_entrypoint):
-        warnings.warn(f'Invalid entrypoint path. Executable will not be linked to an existing Python file.', UserWarning)
+        warnings.warn('Invalid entrypoint path. Executable will not be linked to an existing Python file.', UserWarning)
         # raise ValueError('Invalid entrypoint path.')
     if not os.path.exists(dirpath_exec):
         raise ValueError(f'Invalid executable path: directory "{dirpath_exec}" does not exist.')
